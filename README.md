@@ -4,6 +4,8 @@ You can update all descriptions of your YouTube channel videos via CLI.
 
 Download binary from **[HERE](https://github.com/nekonenene/youtube_description_updater/releases/download/v1.0.0/youtube_description_updater)**.
 
+[Japanese（日本語での説明）](#japanese)
+
 
 ## Required
 
