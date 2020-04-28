@@ -38,11 +38,11 @@ func ReplaceDescription() {
 			title := video.Snippet.Title
 			description := video.Snippet.Description
 
-			if strings.Contains(description, targetString) {
+			if strings.Contains(description, params.TargetString) {
 				counter += 1
 				fmt.Printf("%v (%v)\n", title, videoId)
 
-				description = strings.Replace(description, targetString, replacementString, -1)
+				description = strings.Replace(description, params.TargetString, params.ReplacementString, -1)
 				video.Snippet.Description = description
 				_, err := service.Videos.Update("snippet", video).Do()
 				if err != nil {

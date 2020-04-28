@@ -16,7 +16,7 @@ import (
 
 // Get YouTube service
 func getService() *youtube.Service {
-	b, err := ioutil.ReadFile(credentialFilePath)
+	b, err := ioutil.ReadFile(params.CredentialFilePath)
 	if err != nil {
 		log.Fatalf("Unable to read client secret file: %v", err)
 	}
@@ -40,10 +40,10 @@ func getService() *youtube.Service {
 func getToken(config *oauth2.Config) *oauth2.Token {
 	// The file token.json stores the user's access and refresh tokens, and is
 	// created automatically when the authorization flow completes for the first time.
-	tok, err := tokenFromFile(tokenFilePath)
+	tok, err := tokenFromFile(params.TokenFilePath)
 	if err != nil {
 		tok = getTokenFromWeb(config)
-		saveToken(tokenFilePath, tok)
+		saveToken(params.TokenFilePath, tok)
 	}
 	return tok
 }
