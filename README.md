@@ -24,13 +24,13 @@ After creating the OAuth 2.0 Client ID, download the JSON file and rename to `cl
 When you want to update an URL in descriptions of all your videos:
 
 ```sh
-youtube_description_updater -target-string https://old.url.com -replacement-string https://new.url.com
+./youtube_description_updater -target-string https://old.url.com -replacement-string https://new.url.com
 ```
 
 You can see all options:
 
 ```sh
-youtube_description_updater -h
+./youtube_description_updater -h
 ``` 
 
 
